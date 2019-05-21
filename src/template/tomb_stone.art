@@ -1,0 +1,8 @@
+<div class="tombstone">
+  <div class="tombstone__title"></div>
+  <ul class="tombstone__ul">
+    <li class="tombstone__li"></li>
+    <li class="tombstone__li"></li>
+    <li class="tombstone__li"></li>
+  </ul>
+</div>

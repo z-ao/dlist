@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.config')
 const config = require('./config')
@@ -30,15 +29,6 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   plugins: [
-    new UglifyJsPlugin({ //压缩js
-        uglifyOptions: {
-        compress: {
-          warnings: false,
-        }
-      },
-      sourceMap: config.build.productionSourceMap,
-      parallel: true
-    }),
 
     new ExtractTextPlugin({
       filename: config.build.CSSfilename,
